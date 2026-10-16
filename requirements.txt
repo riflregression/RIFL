@@ -1,0 +1,5 @@
+# FeatBench evaluator/runtime dependencies
+-r datasets/FeatBench/requirements.txt
+openai
+PyYAML
+pytest
