@@ -1,10 +1,6 @@
-# RIFl reproduction package
+# RIFL reproduction package
 
-This is the anonymous reproduction package for the regression-aware
-feature-patch minimization system used in this study. The implementation in
-the source workspace is named **SafeMin/PRUNE**; no separate module named
-`RIFl` was present in the supplied workspace. The `rifl/` directory therefore
-contains that implementation and its experiment documentation.
+Coding agents can successfully implement repository-level feature requests while still introducing regressions into previously correct behavior, creating a need for post-hoc localization of the generated changes responsible for those failures. We formulate this problem as Regression-Inducing Hunk Localization (RIHL) and introduce RIFL (stands for Regression-Inducing change localization in Feature impLementations). RIFL uses an LLM to propose batches of retained-hunk subsets, validates candidates in parallel with separate feature and regression test suites, and uses the aggregate execution outcomes and original proposal rationales as feedback for subsequent batches. Once a valid candidate is found, RIFL applies a Single-Hunk Reduction Check to determine whether one additional retained hunk can be removed while preserving both behavioral requirements. We evaluate RIFL against single-shot and feedback-based localization baselines across multiple trials and multiple base models. RIFL achieves 69.84% average localization success, outperforming the strongest baseline at 42.46%, with ablations confirming the contribution of its key components.
 
 ## Contents
 
